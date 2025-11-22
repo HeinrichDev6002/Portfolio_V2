@@ -14,7 +14,7 @@ h1, p{
 #page-list{
     display: flex;
     justify-content:flex-start;
-    gap: 2vw;
+    gap: 1vw;
     list-style-type: none;
 }
 #page-list li{

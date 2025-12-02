@@ -7,9 +7,15 @@ body, html{
 }
 h1{
     color: #8D86C9;
+    animation-duration: 5s;
+    animation-name: showing;
+    font-family: "Science Gothic";
 }
 h1, p{
     margin: 0;
+}
+a{
+     font-family: "Science Gothic";
 }
 #page-list{
     display: flex;
@@ -40,9 +46,13 @@ h1, p{
     width: 50vw;
     margin: auto;
 }
-#top-header ul, #top-header a{
+#top-header ul{
     display: flex;
     justify-content: space-around;
+    list-style-type: none;
+    
+}
+#top-header a{
     color: #CAC4CE;
     text-decoration: none;
     list-style-type: none;
@@ -50,6 +60,43 @@ h1, p{
 i{
     margin-top: 5vh;
 }
+/* Project css session*/
+#projects{
+    display: flex;
+    justify-content: center;
+    gap: 2vh;
+}
+#projects .card{
+    background-color: #725AC1;
+    width: 30vw;
+    border: 2px #100E1B solid;
+    border-radius: 9px;
+    animation-name: showing;
+    animation-duration: 5s;
+}
+.card h2{
+    color: #CAC4CE;
+    background-color: #100E1B;
+    text-align: center;
+}
+.card p{
+    color: #CAC4CE;
+    text-align: left;
+}
+.card a{
+    color: #100E1B;
+    font-size: 1.9rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+@keyframes showing{
+    from{
+        opacity: 0;
+        color: #2b1414;
+    }
+}
+/* Mobile session */
 
 @media(max-width: 475px){
     #main-article{
@@ -61,4 +108,11 @@ i{
     justify-content:center;
     text-align: center;
 }
+    #projects{
+        flex-direction: column;
+        align-items: center;
+    }
+    #projects .card{
+        width: 90vw;
+    }
 }
